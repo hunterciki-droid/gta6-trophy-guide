@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA 6 Trophy Guide &amp; Tracker — All 55 Trophies, PS5</title>
+<meta name="description" content="Offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: roadmap to the platinum, missable flags, and a cited guide for every trophy.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Unofficial fan guide</p>
+    <h1>GTA 6 Trophy Guide &amp; Tracker</h1>
+    <p class="lede">All 55 trophies — 1 platinum, 2 gold, 6 silver, 46 bronze — with a cited guide for each one, a roadmap to the platinum, and a checklist that saves in your browser. Works fully offline.</p>
+    <div class="progress" id="progress" aria-live="polite">
+      <div class="progress-numbers"><span id="progress-count">0 / 55</span><span id="progress-pct">0%</span></div>
+      <div class="bar"><div class="bar-fill" id="progress-fill" style="width:0%"></div></div>
+      <p class="grade-counts" id="grade-counts"></p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="panel controls" aria-label="Tracker controls">
+    <div class="controls-row">
+      <label class="search-label">Search <input type="search" id="search" placeholder="Trophy name, mission, activity…" autocomplete="off"></label>
+      <label>Kind
+        <select id="kind">
+          <option value="all">All kinds</option>
+          <option value="story">Story</option>
+          <option value="collectibles">Collectibles</option>
+          <option value="activities">Activities</option>
+          <option value="missable">Missable</option>
+          <option value="misc">Other</option>
+          <option value="online">Online</option>
+        </select>
+      </label>
+      <label>Status
+        <select id="status">
+          <option value="all">Earned + unearned</option>
+          <option value="earned">Earned only</option>
+          <option value="unearned">Unearned only</option>
+        </select>
+      </label>
+      <label class="spoiler-toggle"><input type="checkbox" id="spoiler" checked> Hide story spoilers until earned</label>
+    </div>
+    <div class="controls-row">
+      <button type="button" id="export-btn">Export progress (.json)</button>
+      <button type="button" id="import-btn">Import progress…</button>
+      <input type="file" id="import-file" accept=".json,application/json" hidden>
+      <button type="button" id="reset-btn" class="danger">Reset checklist</button>
+      <span class="save-note" id="save-note">Progress saves automatically in this browser (localStorage).</span>
+    </div>
+    <p class="empty-note" id="online-note" hidden>There are no online trophies: all 55 can be earned offline in single-player.</p>
+  </section>
+
+  <section aria-labelledby="list-h">
+    <h2 id="list-h" class="sr-only">Trophy checklist</h2>
+    <p class="result-count" id="result-count"></p>
+    <ul class="trophy-list" id="trophy-list"></ul>
+    <p class="empty" id="empty" hidden>No trophies match these filters.</p>
+  </section>
+
+  <section class="panel" id="roadmap" aria-labelledby="roadmap-h">
+    <h2 id="roadmap-h">Roadmap to the platinum</h2>
+    <p class="panel-note">About 200 hours, difficulty 4/10, one playthrough. No online trophies, no mission replay, and free roam continues after the story. Cheats disable trophies and saving — keep them off.</p>
+    <div class="stages">
+      <article class="stage">
+        <h3>Stage 1 — Play the story <span class="stage-meta">60–80 hrs &middot; 20 trophies</span></h3>
+        <p>Finish Chapters 1–5 and the side-character strands as they appear. Do the one missable thing in the game here: the Chapter 1 meditation (see the red box below). Scan vehicles with WAiNK and study animals with binoculars as you travel — 200 vehicles and 100 animals are needed later.</p>
+        <p class="stage-list" data-stage-list="1"></p>
+      </article>
+      <article class="stage">
+        <h3>Stage 2 — 100% Completion Checklist <span class="stage-meta">~100 hrs &middot; 16 trophies</span></h3>
+        <p>After the credits the checklist opens at <strong>Progress &gt; Stats &gt; 100% Completion</strong>. It wants 100 optional missions, 200 vehicles scanned, 100 animals studied, 70 of 80 challenges, 300 of 397 stunts, all 8 bank vaults, all 39 gang operations, all 15 Target Decks, 15 of 18 meditations, 15 of 18 card sets, 30 of 40 races won, 10 of 13 race challenge golds, all 42 drone races, the underwater discoveries and both unique playlists.</p>
+        <p class="stage-list" data-stage-list="2"></p>
+      </article>
+      <article class="stage">
+        <h3>Stage 3 — Cleanup <span class="stage-meta">~10 hrs &middot; 19 trophies</span></h3>
+        <p>Whatever is left: the robbery trophies, the partner trophies, the one-off stunts and the money counters. Every quest giver tied to a trophy comes back after the story, so nothing here can be missed.</p>
+        <p class="stage-list" data-stage-list="3"></p>
+      </article>
+    </div>
+    <div class="missable-box" id="missable-box">
+      <h3>⚠ Missable trophies: 1 (potentially)</h3>
+      <p><strong>Positive Mental Attitude</strong> — meditate at every spot across Leonida. During Chapter 1, the morning after the mission <em>Down to Earth</em>, talk to Lucia in the kitchen at Jason&rsquo;s house, follow her to the balcony and choose <strong>Accept</strong>. It raises your meditation counter by 1 but is not marked as a spot like the rest, so it is still unconfirmed whether the trophy needs it. Do it anyway, and make a manual save first. Everything else can be earned after the story.</p>
+      <p class="missable-list" data-missable-list></p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p>Sources for every guide are named beside each trophy: PowerPyx, GTABase, Push Square, KeenGamer, games.gg, GTA Zone, EGamers and Insider Gaming. Guides are written for this entry in our own words; trophy names, descriptions and grades are as PlayStation publishes them. Where no public source has confirmed a method yet, the guide says so instead of guessing.</p>
+    <p>Unofficial fan guide. Not affiliated with Rockstar Games, Take-Two Interactive or PlayStation. No Rockstar logo or artwork is used. This page loads nothing from the network and works offline.</p>
+  </footer>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
